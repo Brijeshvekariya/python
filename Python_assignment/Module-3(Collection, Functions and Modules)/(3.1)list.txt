@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 (Q.1) What is List? How will you reverse a list?
 ->  In Python, a list is a built-in data type used to store collections of data. 
     Lists are created using square brackets and can contain any number of items, which can be of different data types such as integers, strings, and objects. 
@@ -9,15 +9,4 @@
 
     l1 = [1,2,3,4,5]
     print(l1[::-1])
-=======
-(Q.1) What is List? How will you reverse a list?
-->  In Python, a list is a built-in data type used to store collections of data. 
-    Lists are created using square brackets and can contain any number of items, which can be of different data types such as integers, strings, and objects. 
-    Lists are ordered, changeable, and allow duplicate values. 
-    Each item in a list is associated with a number known as a list index, and the index of the first element is 0
 
-    reverse a list :-
-
-    l1 = [1,2,3,4,5]
-    print(l1[::-1])
->>>>>>> be4f5dbe1a515795a623e43ea74b9b1e0f25936b

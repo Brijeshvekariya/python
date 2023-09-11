@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 (Q.) Differentiate between append () and extend () methods?
  -> In Python, append() and extend() are both list methods used to add elements to a list, but they work in different ways and have different characteristics that make them appropriate for different use cases. 
     The append() method adds a single element to the end of the list. 
@@ -19,25 +19,4 @@
     One key difference between append() and extend() is that append() adds a single element to the end of the list, while extend() can add multiple individual elements to the end of the list. 
     Another difference is that when append() is used to add a new element, that element becomes a single element of the list, even if it is itself a list. 
     In contrast, when extend() is used to add multiple elements, each element is added as an individual element of the list.
-=======
-(Q.) Differentiate between append () and extend () methods?
- -> In Python, append() and extend() are both list methods used to add elements to a list, but they work in different ways and have different characteristics that make them appropriate for different use cases. 
-    The append() method adds a single element to the end of the list. 
-    The argument passed in the append() function is added as a single element at the end of the list, and the length of the list is increased by. 
-    For example: 
 
-    python fruits = ["apple", "banana", "grapes"] 
-    fruits.append("orange") 
-    print(fruits)  # Output: ["apple", "banana", "grapes", "orange"] 
-
-    On the other hand, the extend() method adds each element of the iterable (tuple, string, or list) to the end of the list and increases the length of the list by the number of elements of the iterable. 
-    For example: 
-
-    python fruits = ["apple", "banana", "grapes"] 
-    fruits.extend(["peach", "mango", "watermelon"]) 
-    print(fruits)  # Output: ["apple", "banana", "grapes", "peach", "mango", "watermelon"] 
-
-    One key difference between append() and extend() is that append() adds a single element to the end of the list, while extend() can add multiple individual elements to the end of the list. 
-    Another difference is that when append() is used to add a new element, that element becomes a single element of the list, even if it is itself a list. 
-    In contrast, when extend() is used to add multiple elements, each element is added as an individual element of the list.
->>>>>>> be4f5dbe1a515795a623e43ea74b9b1e0f25936b
