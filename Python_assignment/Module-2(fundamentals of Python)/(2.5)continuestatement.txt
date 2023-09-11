@@ -1,0 +1,5 @@
+(Q.1) What is the purpose continue statement in python? 
+
+ -> The continue statement in Python is used to skip the current iteration of a loop and move on to the next iteration. 
+    When the continue statement is executed, the control flow of the program jumps back to the beginning of the loop and starts the next iteration, skipping any code that comes after the continue statement in the current iteration. 
+    The continue statement is useful when you want to skip over certain iterations of a loop based on a certain condition, without exiting the loop entirely.

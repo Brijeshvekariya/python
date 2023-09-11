@@ -1,0 +1,12 @@
+(Q.1) How memory is managed in Python? 
+
+ -> In Python, memory management is automatic and involves the management of a private heap, which is a portion of memory that is exclusive to the Python process.
+    The Python memory manager has different components that deal with various dynamic storage management aspects, such as sharing, segmentation, preallocation, or caching. 
+    The memory manager ensures that the private heap containing all Python objects and data structures is managed efficiently. 
+    The Python memory manager delegates some of the work to the object-specific allocators, but ensures that the latter operate within the bounds of the private heap.
+    Python's memory manager handles memory allocations in Python, and it automatically handles the allocation and deallocation of memory. 
+    The Python memory manager automatically vanishes when the object is no longer in use. 
+    Python uses dynamic memory allocation, which is managed by the heap data structure. 
+    The heap memory allocation holds the objects and other data structures that will be used in the program, and the Python memory manager manages the allocation or de-allocation of the heap memory space through the API functions. 
+    Understanding memory management in Python is important for software developers, as writing efficient code means writing memory-efficient code. 
+    By understanding the internals of memory management in Python, developers can design memory-efficient applications and more easily debug memory issues in an application 2 .
