@@ -1,0 +1,5 @@
+tuple = ('Brijesh',23,46.05,'Ahmedabad')
+print("First Elements : ",tuple[0])
+print("Second Elements : ",tuple[1])
+print("Third Elements : ",tuple[2])
+print("Fourth Elements : ",tuple[3])
