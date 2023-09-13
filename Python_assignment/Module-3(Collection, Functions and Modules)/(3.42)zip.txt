@@ -1,0 +1,12 @@
+(Q) why we use zip() method in Python
+
+    The zip() function in Python is used to combine two or more iterables (e.g., lists, tuples, or other iterable objects) element-wise into dictionary or tuples. 
+    Each tuple or dictionary produced by zip() contains elements from the corresponding positions of the input iterables. 
+    In other words, it pairs up elements from the input iterables based on their positions, creating dictionary or tuples
+
+    eg.
+
+    l1 = [1,2,3]
+    l2 = ['a','b','c']
+
+    d = dict(zip(l1,l2))
