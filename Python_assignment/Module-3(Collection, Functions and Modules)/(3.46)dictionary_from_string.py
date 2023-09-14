@@ -1,5 +1,9 @@
-s1 = "1,2,3"
-s2 = "brijesh,vekariya,patel"
+s = "w3resource"
+count = {}
 
-dict = dict(zip(s1,s2))
-print(dict)
+for i in s:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+print(count)
