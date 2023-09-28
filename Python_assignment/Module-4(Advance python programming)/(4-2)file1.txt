@@ -1,0 +1,12 @@
+(Q) What is File function in python? What is keywords to create and write file?
+->  File handling in Python refers to the manipulation and management of files on a computer's file system using Python code. 
+    This includes tasks such as creating, reading, writing, updating, and deleting files. 
+    Python provides built-in functions and methods to perform these file-related operations.
+
+    The keywords to create and write file is :
+    sytax :-
+    file_object = open(file_name, mode)
+    
+    1. 'x' - Exclusive creation mode - Creates a new file, but raises an error if the file already exists
+    2. 'w' - write mode - for creating and writing file.
+    3. 'a' - Append mode - Opens the file for creating and writing.
