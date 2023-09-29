@@ -1,0 +1,13 @@
+Python is a high-level, interpreted programming language known for its simplicity and readability. 
+It was created by Guido van Rossum and first released in 1991. 
+Python has gained widespread popularity in the software development community due to its ease of use and versatility. 
+Here are some key characteristics and features of Python :
+
+Readability: Python's syntax is designed to be clear and readable, making it an excellent choice for beginners and experienced programmers alike. 
+It emphasizes code readability through the use of indentation (whitespace) instead of curly braces or keywords.
+
+Interpreted Language: Python is an interpreted language, which means you can run Python code directly without the need for compilation. 
+This makes development and testing more straight forward.
+
+Multi-Purpose: Python is a versatile language used in various domains, including web development, data analysis, artificial intelligence (AI), scientific computing, automation, scripting, and more.
+hey
