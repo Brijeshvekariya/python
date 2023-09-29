@@ -1,0 +1,35 @@
+(Q) Explain Exception handling? What is an Error in Python? 
+
+->  Exception handling is a fundamental concept in programming that allows you to deal with unexpected or exceptional situations that can occur during the execution of a program. 
+These exceptional situations, often referred to as exceptions or errors, can include things like division by zero, attempting to access a non-existent file, or trying to use a variable that hasn't been defined. 
+Exception handling enables you to gracefully handle these situations to prevent your program from crashing or producing incorrect results.
+
+In Python, exceptions are objects that represent errors or exceptional events that can occur during program execution. 
+When an error occurs, Python raises an exception, which can be caught and handled by the programmer to take appropriate actions. 
+The primary mechanism for handling exceptions in Python is the try and except block structure.    
+
+In Python, an "Error" refers to an exceptional condition or situation that disrupts the normal flow of a program. 
+Errors in Python can be broadly categorized into two main types:
+
+Syntax Errors: These are also known as parsing errors. 
+Syntax errors occur when the Python interpreter encounters code that does not conform to the syntax rules of the Python programming language. 
+They are typically detected at the time the code is parsed, before the program starts running. 
+Syntax errors prevent the program from running at all until they are fixed. 
+Common examples of syntax errors include:
+
+-Missing colons at the end of a def statement or at the end of a loop.
+-Mismatched parentheses, brackets, or braces.
+-Using reserved keywords as variable names.
+-Incorrect indentation.
+
+Runtime Errors (Exceptions): Runtime errors, also known as exceptions, occur during the execution of a Python program. 
+These errors occur when the program encounters unexpected conditions or exceptional situations, such as:
+
+-Division by zero (ZeroDivisionError).
+-Attempting to access a file that doesn't exist (FileNotFoundError).
+-Trying to access an index that is out of range (IndexError).
+-Using a variable that has not been defined (NameError).
+-Attempting to convert a string that cannot be converted to an integer or another data type (ValueError).
+
+Runtime errors can be handled and managed using exception handling constructs like try, except, and finally blocks in Python. 
+This allows you to gracefully handle these exceptional situations, preventing your program from crashing and providing a way to recover or take alternative actions.

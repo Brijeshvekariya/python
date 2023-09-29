@@ -1,0 +1,5 @@
+(Q) When is the finally block executed? 
+
+->  The finally block always executes after normal termination of try block or after except block if try block terminates due to some exception
+    The primary purpose of the finally block is to ensure that critical cleanup or resource release code is executed regardless of whether an exception occurs or not. 
+    It's commonly used when working with files, databases, network connections, or other resources that need to be closed or released properly, even in the presence of exceptions.
