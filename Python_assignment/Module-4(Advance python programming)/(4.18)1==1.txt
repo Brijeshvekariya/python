@@ -1,0 +1,4 @@
+(Q) What happens when „1‟== 1 is executed?
+
+->  When the expression "1" == 1 is executed in Python, it checks for equality between a string "1" and an integer 1. 
+    In this case, it will return False because the two values being compared are of different types and, therefore, not equal  
