@@ -1,0 +1,4 @@
+(Q) What relationship is appropriate for Course and Faculty?
+
+-> In a database management system (DBMS), the relationship between a "Course" table and a "Faculty" table would typically be a MANY-to-MANY relationship.
+    This means that multiple courses can be taught by multiple faculty members, and each faculty member can teach multiple courses.
