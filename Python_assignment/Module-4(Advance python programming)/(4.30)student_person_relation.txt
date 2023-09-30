@@ -1,0 +1,7 @@
+(Q) What relationship is appropriate for Student and Person?
+
+->   In object-oriented programming terms, it's an example of Single-Level inheritance, where the "Student" class which is Derived class inherits properties and behaviors from the "Person" class which is Base class.
+
+        In a Database Management System (DBMS), the relationship between "Student" and "Person" would be ONE-to-ONE relationship.
+        This means that one student can be only one person as well one person can have only one student record.
+        
