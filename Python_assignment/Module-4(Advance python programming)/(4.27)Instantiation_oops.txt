@@ -1,0 +1,17 @@
+(Q) What is Instantiation in terms of OOP terminology? 
+
+->  In object-oriented programming (OOP) terminology, "instantiation" refers to the process of creating an instance (or object) of a class. 
+    An instance is a specific, unique occurrence of a class, and it can be thought of as an individual object with its own set of attributes and behaviors, as defined by the class.
+
+->  Instantiation is the process of creating an object based on a class. It involves calling the class's constructor (often named __init__ in Python) to initialize the object's attributes and set it up for use.
+
+    for example:
+
+        class Person:
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+
+        # Instantiating two Person objects
+        person1 = Person("Brijesh", 23)
+        person2 = Person("Dhoni", 45)
