@@ -1,0 +1,14 @@
+(Q) What is used to check whether an object o is an instance of class A?
+
+->  In Python, you can use the isinstance() function to check whether an object o is an instance of a specific class, such as class A. 
+    The isinstance() function takes two arguments: 
+        the object you want to check, and the class (or tuple of classes) you want to check against.
+
+    for example:
+
+        if isinstance(object, class):
+            # o is an instance of class A
+            print("object is an instance of class")
+        else:
+            # o is not an instance of class A
+            print("Object is not an instance of class")
