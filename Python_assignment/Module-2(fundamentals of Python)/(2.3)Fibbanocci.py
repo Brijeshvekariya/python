@@ -5,7 +5,7 @@ c=0
 print("The Fibanocci Series is : ",a,end=" ")
 for i in range(0,num1):
     if a<num1:
-        print(a,end=" ")
+        print(b,end=" ")
         c = b + a
         a = b
         b = c

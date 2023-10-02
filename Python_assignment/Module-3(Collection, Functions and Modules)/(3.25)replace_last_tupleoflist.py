@@ -16,11 +16,9 @@ for t in list_of_tuples:
     l1 = list(t)
     list_of_tuples.pop(0)
     list_of_tuples.append(l1)
-    print(list_of_tuples)
 # tup = []
 for i in list_of_tuples:
     i[-1] = n
-    print(i)
 for i in list_of_tuples:
     t = tuple(i)
     list_of_tuples.pop(0)
