@@ -12,7 +12,7 @@ def dbstore():
     conn = db_connect()
     cursor = conn.cursor()
     query = "insert into customer(name,mobile,total) values(%s,%s,%s)"
-    args = (e_cusname.get(),e_phno.get(),total)
+    args = (e_cusname.get(),e_phno.get(),ceil(total))
     cursor.execute(query,args)
     conn.commit()
 
@@ -147,6 +147,7 @@ def generate_bill():
             textarea.insert('end','*'*45)
             textarea.insert('end','\n Products\t\t   Quantity\t\t   Price\n')
             textarea.insert('end','*'*45)
+            textarea.insert('end',"\n")
             if e_bathsoap.get()!='0':
                 textarea.insert('end',f'Bath Soap \t\t    {e_bathsoap.get()}\t\t    {soap} /-\n')
             if e_bodylotion.get()!='0':
@@ -188,7 +189,7 @@ def generate_bill():
             textarea.insert('end','\n\n')
             textarea.insert('end','*'*45)
             if total!=0:
-                textarea.insert('end',f'\n\n Total Amount -----------------  ₹ {total} /-\n')
+                textarea.insert('end',f'\n\n Total Amount -----------------  ₹ {ceil(total)} /-\n')
             textarea.insert('end','*'*45)
             updatebill()
             savebill()
