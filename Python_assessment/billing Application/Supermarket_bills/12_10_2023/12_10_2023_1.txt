@@ -1,0 +1,23 @@
+	-------Welcome Customer-------
+bill number : 0
+Customer name : Brijesh
+Mobile Number  : 8320405731
+*********************************************
+ Products		   Quantity		   Price
+*********************************************Bath Soap 		    1		    15 /-
+Body Lotion 		    1		    40 /-
+Ashirwad Atta 		    1 kg		    55 /-
+Basmati Rice 		    1 kg		    200 /-
+Fanta 		    1		    40 /-
+Maaza 		    1		    40 /-
+*********************************************
+
+Body Products Tax 				   ₹ 16 /-
+Grocery Products Tax 				   ₹ 46 /-
+Soft-Drink Products Tax 				   ₹ 32 /-
+
+
+*********************************************
+
+ Total Amount -----------------  ₹ 483.29999999999995 /-
+*********************************************
