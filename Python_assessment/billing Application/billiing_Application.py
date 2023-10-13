@@ -33,19 +33,25 @@ def on_leave(event):
 
 
 def enterbutton():
-        conn=db_connect()
-        cursor = conn.cursor()
-        query = "select name from customer where mobile = %s"
-        args = (e_phno.get(),)
-        cursor.execute(query,args)
-
-        row = cursor.fetchone()  # create row to store data from database
-
-        if row:
-            e_cusname.insert(0,row)
-            msg.showinfo("Existing Customer",f"Welcome {e_cusname.get()}\nGlad to see you again")
+        if e_cusname.get()!="" and e_phno.get()!="":
+            msg.showinfo("Status","Data Stored in System")
         else:
-            msg.showerror("New Customer","Dear New Customer, Please Enter Your Name : ")
+            conn=db_connect()
+            cursor = conn.cursor()
+            query = "select name from customer where mobile = %s"
+            args = (e_phno.get(),)
+            cursor.execute(query,args)
+
+            row = cursor.fetchone()  # create row to store data from database
+
+            if row:
+                e_cusname.insert(0,row)
+                msg.showinfo("Existing Customer",f"Welcome {e_cusname.get()}\nGlad to see you again 😎")
+            else:
+                if e_cusname.get()!="":
+                    msg.showerror("Wrong Feild","Dear Customer, First Enter Mobile Number : ")
+                else:
+                    msg.showerror("New Customer","Dear New Customer, Please Enter Your Name : ")
 
 
 bill_num = 0
