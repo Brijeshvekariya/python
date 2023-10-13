@@ -35,17 +35,17 @@ def on_leave(event):
 def enterbutton():
         conn=db_connect()
         cursor = conn.cursor()
-        query = "select mobile from customer where name = %s"
-        args = (e_cusname.get(),)
+        query = "select name from customer where mobile = %s"
+        args = (e_phno.get(),)
         cursor.execute(query,args)
 
         row = cursor.fetchone()  # create row to store data from database
 
         if row:
-            e_phno.insert(0,row)
+            e_cusname.insert(0,row)
             msg.showinfo("Existing Customer",f"Welcome {e_cusname.get()}\nGlad to see you again")
         else:
-            msg.showerror("New Customer","Dear New Customer, Please Enter Your Mobile Number: ")
+            msg.showerror("New Customer","Dear New Customer, Please Enter Your Name : ")
 
 
 bill_num = 0
@@ -239,7 +239,7 @@ root.iconbitmap(r'D:\brijesh\python\Python_assessment\billing Application\assets
 
 root.minsize(400,300) # Set the window size
 root.maxsize(1400,1100)
-
+msg.showinfo("Checking Customer","Please Enter Mobile Number to check if customer exits in system or Not:")
 # Create Title 
 title =Label(root,fg="white",background="brown4",font="Arial 28 bold", text="SuperStar Billing System",borderwidth=10,relief=SUNKEN)
 # Create customer details frame
