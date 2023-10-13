@@ -16,6 +16,38 @@ def dbstore():
     cursor.execute(query,args)
     conn.commit()
 
+def on_enter(event):
+    enter_button.config(cursor="hand2")
+    total_button.config(cursor="hand2")
+    generate_button.config(cursor="hand2")
+    clear_button.config(cursor="hand2")
+    exit_button.config(cursor="hand2")
+      # Change cursor to a pointing hand when hovering
+
+def on_leave(event):
+    enter_button.config(cursor="")  # Restore the default cursor when leaving
+    total_button.config(cursor="")  # Restore the default cursor when leaving
+    generate_button.config(cursor="")  # Restore the default cursor when leaving
+    clear_button.config(cursor="")  # Restore the default cursor when leaving
+    exit_button.config(cursor="")  # Restore the default cursor when leaving
+
+
+def enterbutton():
+        conn=db_connect()
+        cursor = conn.cursor()
+        query = "select mobile from customer where name = %s"
+        args = (e_cusname.get(),)
+        cursor.execute(query,args)
+
+        row = cursor.fetchone()  # create row to store data from database
+
+        if row:
+            e_phno.insert(0,row)
+            msg.showinfo("Existing Customer",f"Welcome {e_cusname.get()}\nGlad to see you again")
+        else:
+            msg.showerror("New Customer","Dear New Customer, Please Enter Your Mobile Number: ")
+
+
 bill_num = 0
 def updatebill():
     '''update bill number automatically'''
@@ -219,7 +251,7 @@ l_phno = Label(cus_details_frame, background="brown4", fg="white", font="Arial 1
 e_phno = Entry(cus_details_frame,font="Arial 15",bd=7,width=10)   #store phone number
 l_bill = Label(cus_details_frame, background="brown4", fg="white", font="Arial 15", text="Bill Number : ")
 e_bill = Label(cus_details_frame,background="white",fg="black",bd=7,font="Arial 15 bold",width=7,text=f"{bill_num}")   
-enter_button = Button(cus_details_frame,text="Enter",font="Arial 12 bold",bd = 7,bg="red4",fg="white",width=10)
+enter_button = Button(cus_details_frame,text="Enter",font="Arial 12 bold",bd = 7,bg="red4",fg="white",width=10,command=enterbutton)
 
 # Create Product Frame
 product_frame  = Frame(root) # Frame does not have a label(title).
@@ -379,6 +411,19 @@ total_button.grid(row=0,column=4,rowspan=3,padx=25)
 generate_button.grid(row=0,column=5,rowspan=3,padx=25)
 clear_button.grid(row=0,column=6,rowspan=3,padx=25)
 exit_button.grid(row=0,column=7,rowspan=3,padx=25)
+
+# changing cursor
+enter_button.bind("<Enter>", on_enter)
+enter_button.bind("<Leave>", on_leave)
+total_button.bind("<Enter>", on_enter)
+total_button.bind("<Leave>", on_leave)
+generate_button.bind("<Enter>", on_enter)
+generate_button.bind("<Leave>", on_leave)
+clear_button.bind("<Enter>", on_enter)
+clear_button.bind("<Leave>", on_leave)
+exit_button.bind("<Enter>", on_enter)
+exit_button.bind("<Leave>", on_leave)
+
 
 # Start the GUI main loop
 root.mainloop()
