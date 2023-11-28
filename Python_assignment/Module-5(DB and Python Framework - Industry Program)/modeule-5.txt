@@ -1,0 +1,99 @@
+(1) Why Django should be used for web-development? Explain how you can create a project in Django?
+-> Django is a fantastic choice for web development due to several compelling reasons:
+    High-level Framework: Django is a high-level web framework that simplifies the development process. It provides pre-built components and tools, allowing developers to focus on building their application rather than reinventing the wheel.
+
+    Batteries Included: Django comes with a wide range of functionalities out-of-the-box. It includes an ORM (Object-Relational Mapping) for database interactions, a robust admin panel for content management, URL routing, authentication, and much more, reducing the need for external libraries for common tasks.
+
+    Security: Security is a top priority in Django. It offers built-in protection against common web security threats like SQL injection, cross-site scripting (XSS), and clickjacking. This helps developers create more secure web applications by default.
+
+    To create a project in Django:
+
+    python -m venv myenv
+    to create virtual environment
+
+
+    D:\brijesh\Django\myenv\Scripts>activate
+    to activate virtual environment
+
+    (myenv) D:\brijesh\Django>pip install django
+    then install django
+
+    (myenv) D:\brijesh\Django>django-admin --version
+    to check django version
+
+    (myenv) D:\brijesh\Django>django-admin startproject basicprojects
+    to create projects
+
+    (myenv) D:\brijesh\Django\basicprojects>code .
+    to open project in vscode
+
+    (myenv) D:\brijesh\Django\basicprojects>python manage.py startapp myapp
+    to create app
+
+    (myenv) D:\brijesh\Django\basicprojects>python manage.py runserver      
+    to run server
+
+
+(2) How to check installed version of django?
+-> You can check the installed version of Django by running the following command in your terminal:
+    python -m django --version
+
+(3) Explain what does django-admin.py make messages command is used for?
+->  The django-admin.py make messages command is used to create a new message file in your Django project. This command is particularly useful when you want to create a new message file for a specific app.
+    The purpose of django-admin.py make messages is to extract translatable strings from the codebase and create or update message files, not specifically to create a new message file for a Django project or app.
+
+(4) What is Django URLs? make program to create django urls?
+->  In Django, URLs are mappings between URL patterns and view functions or classes. They define how URLs should be structured in an application and which view to call when a specific URL pattern is matched.
+
+    Here's an example of how you can create Django URLs in your project: 
+    # In myapp/urls.py
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path('', views.home, name='home'),  # Mapping the root URL to the home view
+        path('about/', views.about, name='about'),  # Mapping the '/about/' URL to the about view
+        # Add more URL patterns as needed
+    ]
+
+(5) What is a QuerySet?Write program to create a new Post object in database:
+->  A QuerySet is a collection of objects, which is returned by the database when you perform a query.
+    Here's an example of creating a new Post object and saving it to the database using a QuerySet:
+    # In myapp/models.py
+    
+    from django.db import models
+    
+    class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    
+    # In myapp/views.py
+    
+    from django.shortcuts import render
+    from .models import Post
+   
+    def create_post(request):
+        if request.method == 'POST':
+            title = request.POST['title']
+            content = request.POST['content']
+            new_post = Post(title=title, content=content)
+            new_post.save()
+            return render(request, 'create_post.html')
+
+(6) Mention what command line can be used to load data into Django? 
+-> You can use the following command to load data into Django:
+    python manage.py loaddata <filename>
+
+    python manage.py loaddata fixture_file_name
+    .json
+    file is also supported.
+
+(7) Explain what does django-admin.py make messages command is used for?
+->  The django-admin.py make messages command is used to create a new message file in your Django project. This command is particularly useful when you want to create a new message file for a specific app.
+    The purpose of django-admin.py make messages is to extract translatable strings from the codebase and create or update message files, not specifically to create a new message file for a Django project or app.
+
+(8) Make Django application to demonstrate following things o There will be 2 modules(Admin,Product manager) o Admin can add product name (ex.Product id and product name) ex. (1, Samsung), (2, Apple)...etc. Data should store in 
+-> Github link :- www.github.com/brijeshvekariya/parikh_hospital_website
+
+(9) Product_mst table with product id as primary key o Admin can add product subcategory details Like (Product price, product image, Product model, product Ram) data should store in Product_sub_cat table o Admin can get product name as foreign key from product_mst table in product_sub_category_details page Admin can view, update and delete all registered details of product manager can search product on search bar and get all details about product.
+->  Github link :- www.github.com/brijeshvekariya/stylesphere_e-commerce
