@@ -1,8 +1,8 @@
 def check(l1,l2):
     for i in l1:
-        for i in l2:
+        if i in l2:
             return  True
-l1 = []
+
 l2 = []
 l1 =[]
 n = int(input("Enter Number of Elements of 1 list : "))

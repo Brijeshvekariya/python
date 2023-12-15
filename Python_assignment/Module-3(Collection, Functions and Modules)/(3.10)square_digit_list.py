@@ -1,11 +1,9 @@
-l1 = []
-for i in range(0,30):
-    l1.append(i+1)
+
 l2 = []
-for i in range(0,5):
-    l = l1[i] * l1[i]
+for i in range(1,6):
+    l = i * i
     l2.append(l)
-for i in range(-5,0):
-    l = l1[i] * l1[i]
+for i in range(26,31):
+    l = i * i
     l2.append(l)
 print(l2)
